@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>永字八法·智慧书法启蒙课</title>
+    <style>
+      /* Hide platform branding */
+      iframe[src*="kimi"],
+      div[class*="kimi"],
+      div[id*="kimi"],
+      .kimi-agent,
+      [class*="Agent"],
+      a[href*="kimi.com"],
+      div[style*="position: fixed"][style*="bottom: 0"],
+      div[style*="position:fixed"][style*="bottom:0"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-Bsh3lvrc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C1rIakod.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function() {
+        function removeBranding() {
+          var selectors = [
+            'iframe[src*="kimi"]',
+            'div[class*="kimi"]', 'div[id*="kimi"]',
+            'a[href*="kimi.com"]',
+            '[class*="Agent"]',
+            'div[style*="position: fixed"][style*="z-index: 99999"]',
+            'div[style*="position:fixed"][style*="z-index:99999"]'
+          ];
+          selectors.forEach(function(s) {
+            document.querySelectorAll(s).forEach(function(el) {
+              el.style.display = 'none';
+              el.style.visibility = 'hidden';
+              el.style.opacity = '0';
+              if (el.parentNode) el.parentNode.removeChild(el);
+            });
+          });
+        }
+        removeBranding();
+        setInterval(removeBranding, 1000);
+      })();
+    </script>
+  </body>
+</html>
